@@ -1,22 +1,21 @@
 # TO-DO: Complete the selection_sort() function below 
-def selection_sort( arr ):
+
+
+arr = [81, 9, 22, 7, 1,]
+def selection_sort(arr):
     # loop through n-1 elements
-    for i in range(0, len(arr) - 1):
-        cur_index = i
-        smallest_index = cur_index
-        # TO-DO: find next smallest element
-        # (hint, can do in 3 loc) 
-             
-
-
-
-        # TO-DO: swap
-
-
-
+    for a in range(0, len(arr) -1):
+        smallest_index = a 
+        #must find the next smallest index through another for loop
+        for j in range(a + 1, len(arr)):
+            if arr[j] < arr[smallest_index]: 
+                smallest_index = j
+        if smallest_index != a: 
+            arr[smallest_index], arr[a] = arr[a], arr[smallest_index]
 
     return arr
 
+print(selection_sort(arr))
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
